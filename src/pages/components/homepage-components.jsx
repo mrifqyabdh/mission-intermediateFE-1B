@@ -1,7 +1,9 @@
-import { } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 export const Header = () => {
+    const [isOpen , setIsOpen] = useState(false);
     return (
         <header>
                 <nav className="nav">
@@ -14,11 +16,12 @@ export const Header = () => {
                         <a href="#">Daftar saya</a>
                     </div>
                     <div className="profile">
-                        <button>
+                        <button onClick={() => setIsOpen(!isOpen)}>
                             <img className="avatar" src="assets/avatar-img.png" alt="" />
                             <img className="vector" src="assets/Vector.png" alt="" />
                         </button>
-                        <div className="dropdown">
+                        {isOpen && (
+                            <div className="dropdown" >
                             <a href="#">
                                 <img src="assets/badan.png" alt="" /> Profil Saya
                             </a>
@@ -30,6 +33,7 @@ export const Header = () => {
                                 <Link to="/">Keluar</Link>
                             </div>
                         </div>
+                        )}
                     </div>
                 </nav>
             </header>
@@ -66,18 +70,25 @@ export const TopCard = () => {
     )
 }
 export const LanjutNontonCard = () => {
+    const boxRef = useRef(null);
+    const scrollRight = () => {
+        boxRef.current.scrollBy({ left: 200, behavior: "smooth" });     
+    }
+    const scrollLeft = () => {
+        boxRef.current.scrollBy({ left: -200, behavior: "smooth" });       
+    }
     return (
         <div className="lanjut-tonton-card">
                     <h1>Melanjutkan Tonton Film</h1>
 
-                    <div className="lanjut-tonton-card-container">
-                        <img
+                    <div className="lanjut-tonton-card-container" ref={boxRef}>
+                        <img onClick={scrollLeft}
                             style={{ width: 50, height: 50 }}
                             className="arrowleft"
                             src="assets/arrowleft.png"
                             alt="arrowleft"
                         />
-                        <img
+                        <img onClick={scrollRight}
                             style={{ width: 50, height: 50 }}
                             className="arrowright"
                             src="assets/arrowright.png"
@@ -182,24 +193,31 @@ export const LanjutNontonCard = () => {
 }
 
 export const MoviePosterCard = (props) => {
+    const boxRef = useRef(null);
+    const scrollRight = () => {
+        boxRef.current.scrollBy({ left: 200, behavior: "smooth" });     
+    }
+    const scrollLeft = () => {
+        boxRef.current.scrollBy({ left: -200, behavior: "smooth" });       
+    }
     return (
-        <div className="movie-poster-card">
+        <div className="movie-poster-card" >
                     <h1>{props.title}</h1>
-                    <img
+                    <img onClick={scrollLeft}
                         style={{ width: 50, height: 50 }}
                         className="arrowleft"
                         id="arrowleft"
                         src="assets/arrowleft.png"
                         alt="arrowleft"
                     />
-                    <img
+                    <img onClick={scrollRight}
                         style={{ width: 50, height: 50 }}
                         className="arrowright"
                         id="arrowright"
                         src="assets/arrowright.png"
                         alt="arrowleft"
                     />
-                    <div className="movie-poster-card-container">
+                    <div className="movie-poster-card-container" ref={boxRef}>
                         <div className={props.label1}>
                             <div>{props.labelText1}</div>
                         <img src={props.movie1PosterSrc} alt="film-4" />

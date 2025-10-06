@@ -84,7 +84,7 @@ padding-right: 80px;
 }
 
 .dropdown{
-  display: none;
+  display: block;
   position: absolute;
   background-color: #fff;
   background-color: lch(13.71% 0 296.81);
@@ -131,10 +131,6 @@ padding-right: 80px;
 .profile{
   display: inline-block;
   margin-left: auto;
-}
-
-.profile:hover .dropdown{
-    display: block;
 }
 
 .dropdown a:hover{
@@ -588,7 +584,7 @@ position: relative;
 }
 
 .dropdown{
-  display: none;
+  display: block;
   position: absolute;
   background-color: #fff;
   background-color: lch(13.71% 0 296.81);
@@ -643,9 +639,6 @@ position: relative;
   margin-right: 20px;
 }
 
-.profile:hover .dropdown{
-    display: block;
-}
 
 .dropdown a:hover{
   color: #3254FF;
