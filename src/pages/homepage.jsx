@@ -3,7 +3,6 @@ import { Header, TopCard, LanjutNontonCard, MoviePosterCard, FooterLarge, Footer
 export const Beranda = () => {
   return (
 <div className='body-beranda'>
-
   <main>
       <Header />
       <TopCard />
