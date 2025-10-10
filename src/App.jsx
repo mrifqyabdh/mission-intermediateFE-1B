@@ -1,9 +1,11 @@
-import {  } from 'react'
+import { lazy } from 'react'
 import './App.css'
 import './home.css'
 import { Routes, Route } from 'react-router-dom';
-import { SignIn , SignUp } from './pages/index.jsx';
-import { Beranda } from './pages/homepage.jsx';
+
+const SignIn = lazy(() => import('./pages/signin.jsx'))
+const SignUp = lazy(() => import('./pages/signup.jsx'))
+const Beranda = lazy(() => import('./pages/homepage.jsx'))
 
 function App() {
   return (

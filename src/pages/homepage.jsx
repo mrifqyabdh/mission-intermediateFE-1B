@@ -1,6 +1,11 @@
 import {  } from 'react'
-import { Header, TopCard, LanjutNontonCard, MoviePosterCard, FooterLarge, FooterSmall } from './components/homepage-components'; 
-export const Beranda = () => {
+import {Header} from './components/homepage-components/header.jsx';
+import {TopCard} from './components/homepage-components/TopCard.jsx';
+import {LanjutNontonCard} from './components/homepage-components/LanjutNontonCard.jsx';
+import {MoviePosterCard} from './components/homepage-components/MoviePosterCard.jsx';
+import {FooterLarge, FooterSmall} from './components/homepage-components/Footer.jsx';
+
+const Beranda = () =>  {
   return (
 <div className='body-beranda'>
   <main>
@@ -47,3 +52,5 @@ export const Beranda = () => {
 
   );
 };
+
+export default Beranda
