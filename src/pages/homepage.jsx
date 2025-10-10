@@ -11,8 +11,8 @@ const Beranda = () =>  {
   <main>
       <Header />
       <TopCard />
-      
       <LanjutNontonCard />
+      
       <MoviePosterCard title="Top Rating Film dan Series Hari ini" 
       movie1PosterSrc="posters/poster1-tinggi.png" movie2PosterSrc="posters/poster2-tinggi.png" movie3PosterSrc="posters/poster3-tinggi.png" 
       movie4PosterSrc="posters/poster4-tinggi.png" movie5PosterSrc="posters/poster5-tinggi.png" movie6PosterSrc="posters/poster6-tinggi.png" 

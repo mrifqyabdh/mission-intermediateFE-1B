@@ -8,6 +8,16 @@ export const MoviePosterCard = (props) => {
     const scrollLeft = () => {
         boxRef.current.scrollBy({ left: -200, behavior: "smooth" });       
     }
+    const data = [
+        { id: 1, name: "Film 1" },
+        { id: 2, name: "Film 2" },
+        { id: 3, name: "Film 3" },
+        { id: 4, name: "Film 4" },
+        { id: 5, name: "Film 5" },
+        { id: 6, name: "Film 6" },
+        { id: 7, name: "Film 7" },
+        { id: 8, name: "Film 8" },
+    ];
     return (
         <div className="movie-poster-card" >
                     <h1>{props.title}</h1>
@@ -26,38 +36,12 @@ export const MoviePosterCard = (props) => {
                         alt="arrowleft"
                     />
                     <div className="movie-poster-card-container" ref={boxRef}>
-                        <div className={props.label1}>
-                            <div>{props.labelText1}</div>
-                        <img src={props.movie1PosterSrc} alt="film-1" />
-                        </div>
-                        <div className={props.label2}>
-                            <div>{props.labelText2}</div>
-                        <img src={props.movie2PosterSrc} alt="film-2" />
-                        </div>
-                        <div className={props.label3}>
-                            <div>{props.labelText3}</div>
-                        <img src={props.movie3PosterSrc} alt="film-3" />
-                        </div>
-                        <div className={props.label4}>
-                            <div>{props.labelText4}</div>
-                        <img src={props.movie4PosterSrc} alt="film-4" />
-                        </div>
-                        <div className={props.label5}>
-                            <div>{props.labelText5}</div>
-                        <img src={props.movie5PosterSrc} alt="film-5" />
-                        </div>
-                        <div className={props.label6}>
-                            <div>{props.labelText6}</div>
-                        <img src={props.movie6PosterSrc} alt="film-6" />
-                        </div>
-                        <div className={props.label7}>
-                            <div>{props.labelText7}</div>
-                        <img src={props.movie7PosterSrc} alt="film-7" />
-                        </div>
-                        <div className={props.label8}>
-                            <div>{props.labelText8}</div>
-                        <img src={props.movie8PosterSrc} alt="film-8" />
-                        </div>
+                        {data.map((item) => (
+                            <div className={props[`label${item.id}`]} key={item.id}>
+                                <div>{props[`labelText${item.id}`]}</div>
+                            <img src={props[`movie${item.id}PosterSrc`]} alt={item.name} />
+                            </div>
+                        ))}
                     </div>
                 </div>
     )
