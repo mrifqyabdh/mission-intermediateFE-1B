@@ -416,6 +416,7 @@ button:hover{
     right: 12px;
     bottom: 7px;
     cursor: pointer;
+    height: 12px;
 }
 
 .eye-password-again{
