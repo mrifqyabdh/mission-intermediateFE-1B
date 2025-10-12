@@ -1,6 +1,7 @@
 import { lazy, useEffect } from 'react'
 import './App.css'
 import './home.css'
+
 import { Routes, Route, useLocation } from 'react-router-dom';
 import useTypeStore from './pages/Store/setTypeStore.js';
 

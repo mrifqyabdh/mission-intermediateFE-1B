@@ -5,6 +5,8 @@
   font-family: 'Lato', sans-serif;
 }
 
+@import "tailwindcss";
+
 @media only screen and (min-width: 960px){
 
 .body-beranda{
@@ -324,7 +326,8 @@ img.logo18{
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  overflow-x: auto;           
+  overflow-y: hidden; 
+  overflow-x: auto; 
   gap: 16px;
   margin-top: 40px;
   position: relative;
@@ -336,6 +339,17 @@ img.logo18{
   height: 365px;
   flex-shrink: 0;
   border-radius: 4px;
+
+}
+
+.movie-poster-card-container img:hover{
+  cursor: pointer;
+}
+
+.small-priview-card button:hover{
+  cursor: pointer;
+  transform: scale(1,1.1);
+  background-color: hwb(210 36% 63%);
 }
 
 #rilis-baru{
@@ -390,7 +404,7 @@ img.logo18{
   position: absolute;
   height: 50px;
   width: 50px;
-  z-index: 10;
+  z-index: 999;
   left: 15px;
   margin-top: 50px;
 }
@@ -399,7 +413,7 @@ img.logo18{
   position: absolute;
   height: 50px;
   width: 50px;
-  z-index: 10;
+  z-index: 999;
   right: 15px;
   margin-top: 50px;
 }

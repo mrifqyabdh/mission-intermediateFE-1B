@@ -1,14 +1,13 @@
-import { useEffect } from 'react'
+import {  } from 'react'
 import {Header} from './components/index-components/header.jsx'
 import {Form} from './components/index-components/Forms.jsx'
 import {Links} from './components/index-components/Links.jsx'
 import {Buttons} from './components/index-components/Buttons.jsx'
-import { useLocation } from "react-router-dom";
 import useTypeStore from './Store/setTypeStore.js'
 
 const SignIn = () => {
   const setType = useTypeStore((state) => state.typeStore)
-  
+
   return (
     <>
   <div className="body-signin">
