@@ -357,7 +357,14 @@ img.logo18{
  background-color: #181A1C;
  gap: 32px;
  padding: 40px;
+}
 
+.daftar-saya h1{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%;
+  color: white;
+  padding-left: 40px;
 }
 #rilis-baru{
   margin-bottom: 40px;

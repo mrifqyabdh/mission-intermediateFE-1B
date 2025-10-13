@@ -3,6 +3,7 @@ import useDaftarSaya from "../../Store/setDaftarSayaStore.js";
 
 const SmallCardPriview = (img) => {
   const setList = useDaftarSaya((state) => state.setList);
+  const list = useDaftarSaya((state) => state.list);
   return (
     <div className="small-priview-card"
       style={{
@@ -45,6 +46,7 @@ const SmallCardPriview = (img) => {
         onClick={() => {
             setList(img);
             alert("Film ini ditambahkan di Daftar Saya");
+            console.log(list);
           }}
           style={{
             
