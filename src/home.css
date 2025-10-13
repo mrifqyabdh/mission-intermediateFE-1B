@@ -31,7 +31,7 @@ padding-right: 80px;
 }
 
 .logo-beranda{
-  background-image: url(assets/Logo.png);
+  background-image: url(/assets/Logo.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
