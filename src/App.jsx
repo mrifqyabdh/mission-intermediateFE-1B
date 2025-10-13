@@ -2,7 +2,7 @@ import { lazy, useEffect } from 'react'
 import './App.css'
 import './home.css'
 
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router';
 import useTypeStore from './pages/Store/setTypeStore.js';
 
 const SignIn = lazy(() => import('./pages/signin.jsx'))
