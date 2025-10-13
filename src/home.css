@@ -352,6 +352,13 @@ img.logo18{
   background-color: hwb(210 36% 63%);
 }
 
+.daftar-saya{
+ height: 699px;
+ background-color: #181A1C;
+ gap: 32px;
+ padding: 40px;
+
+}
 #rilis-baru{
   margin-bottom: 40px;
 }
@@ -448,6 +455,7 @@ img.logo18{
 }
 
 .footer-large{
+  position: relative;
   border-top: 0.5px solid lab(91.21% 5.98 -11.62 / 0);
   height: 284px;
   border-color: #fff;
@@ -455,13 +463,13 @@ img.logo18{
   padding: 40px 80px 40px 80px;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  background-color: #181A1C;
 }
 
 .footer-large .footer-container img{
   margin-top: 20px;
   width: 163px;
-  height: 44px
+  height: 44px  
 }
 
 .footer-large .footer-container p{

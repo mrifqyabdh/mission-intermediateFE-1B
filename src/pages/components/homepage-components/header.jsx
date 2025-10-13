@@ -8,11 +8,10 @@ export const Header = () => {
                 <nav className="nav">
                     <div className="nav-left">
                         <div className="logo-beranda">
-                            <a />
                         </div>
+                        <Link to="/Beranda">Beranda</Link>
                         <a href="#">Series</a>
-                        <a href="#">Film</a>
-                        <a href="#">Daftar saya</a>
+                        <Link to="/Daftar-Saya">Daftar Saya</Link>
                     </div>
                     <div className="profile">
                         <button onClick={() => setIsOpen(!isOpen)}>

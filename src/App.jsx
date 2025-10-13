@@ -8,6 +8,10 @@ import useTypeStore from './pages/Store/setTypeStore.js';
 const SignIn = lazy(() => import('./pages/signin.jsx'))
 const SignUp = lazy(() => import('./pages/signup.jsx'))
 const Beranda = lazy(() => import('./pages/homepage.jsx'))
+const DaftarSaya = lazy(() => import('./pages/daftarSaya.jsx'))
+
+const Wrapper = lazy(() => import('./WrapPage.jsx'))
+
 
 function App() {
   const resetTypeForm = useTypeStore((state) => state.setTypePassword)
@@ -20,9 +24,15 @@ function App() {
   return (
     <>
   <Routes>
+
     <Route path="/" element={<SignIn />} />
     <Route path="/SignUp" element={<SignUp />} />
+
+    <Route element={<Wrapper />}>
     <Route path="/Beranda" element={<Beranda />} />
+    <Route path="/Daftar-Saya" element={<DaftarSaya />} />
+    </Route>
+
   </Routes>
     </>
   )

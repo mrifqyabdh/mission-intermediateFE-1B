@@ -23,9 +23,12 @@ export const MoviePosterCard = (props) => {
     { id: 7, name: "Film 7" },
     { id: 8, name: "Film 8" },
   ];
+
   return (
     <div className="movie-poster-card ">
       <h1>{props.title}</h1>
+      {props.showArrow &&     
+      <div>
       <img
         onClick={scrollLeft}
         style={{ width: 50, height: 50 }}
@@ -42,6 +45,8 @@ export const MoviePosterCard = (props) => {
         src="assets/arrowright.png"
         alt="arrowleft"
       />
+      </div>
+    }
       <div className="movie-poster-card-container" ref={boxRef}>
         {data.map((item) => (
           <>
@@ -56,10 +61,10 @@ export const MoviePosterCard = (props) => {
               >
                 <div>{props[`labelText${item.id}`]}</div>
                 {/* on klik kalau sama di set ke null kalau tidak sama di set ke item.id */}
-                <img src={props[`movie${item.id}PosterSrc`]} alt={item.name} />
+                <img src={props[`movie${item.id}PosterSrc`]} alt={item.name}/>
             </div>
-            {isClicked === item.id && 
-                <SmallCardPriview img={props[`movie${item.id}PosterSrc`]}  />
+            {isClicked === item.id && props.ShowPopup &&
+                <SmallCardPriview img={props[`movie${item.id}PosterSrc`]}/>
                 }
             </div>
           </>

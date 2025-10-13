@@ -1,5 +1,8 @@
+
+import useDaftarSaya from "../../Store/setDaftarSayaStore.js";
+
 const SmallCardPriview = (img) => {
-  console.log(img);
+  const setList = useDaftarSaya((state) => state.setList);
   return (
     <div className="small-priview-card"
       style={{
@@ -39,7 +42,12 @@ const SmallCardPriview = (img) => {
         </button>
 
         <button
+        onClick={() => {
+            setList(img);
+            alert("Film ini ditambahkan di Daftar Saya");
+          }}
           style={{
+            
             marginTop: "20px",
             marginLeft: "20px",
             backgroundColor: "transparent",
@@ -61,6 +69,7 @@ const SmallCardPriview = (img) => {
 
         <button
           style={{
+
             marginTop: "20px",
             marginLeft: "20px",
             backgroundColor: "transparent",
