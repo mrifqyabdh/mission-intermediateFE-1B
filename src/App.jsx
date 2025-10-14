@@ -4,6 +4,7 @@ import './home.css'
 
 import { Routes, Route, useLocation } from 'react-router';
 import useTypeStore from './pages/Store/setTypeStore.js';
+import useDaftarSaya from './pages/Store/setDaftarSayaStore.js';
 
 const SignIn = lazy(() => import('./pages/signin.jsx'))
 const SignUp = lazy(() => import('./pages/signup.jsx'))
@@ -16,10 +17,15 @@ const Wrapper = lazy(() => import('./WrapPage.jsx'))
 function App() {
   const resetTypeForm = useTypeStore((state) => state.setTypePassword)
   const location = useLocation();
+  const list = useDaftarSaya((state) => state.list);
   
   useEffect(() => {
     resetTypeForm()
   }, [location.pathname])
+
+  useEffect(() => {
+  console.log("Updated list:", list);
+}, [list]);
 
   return (
     <>

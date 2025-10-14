@@ -3,7 +3,9 @@ import { persist, createJSONStorage } from 'zustand/middleware'
 
 const useDaftarSaya = create(persist((set) => ({
   list: [],
-  setList: (data) => set((state) => ({ list: [data, ...state.list] })),
+ setList: (data) => set((state) => ({
+  list: [...state.list, ...(Array.isArray(data) ? data : [data])]
+}))
 
 }), {
   name: 'daftar-saya',
